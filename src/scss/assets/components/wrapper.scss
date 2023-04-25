@@ -1,0 +1,7 @@
+.wrapper {
+  background: $woodsmoke;
+
+  & * {
+    color: $white;
+  }
+}
