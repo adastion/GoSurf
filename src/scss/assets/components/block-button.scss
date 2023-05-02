@@ -1,0 +1,47 @@
+.block-button {
+  display: flex;
+  gap: 1.9rem;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 800;
+
+  &__name {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 2rem;
+      height: 0.1rem;
+      background: $white;
+      position: absolute;
+      right: -3rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__btn {
+    background: $cornflower_blue;
+    padding: 2.2rem 1.7rem;
+    cursor: pointer;
+
+    & svg {
+      fill: $white;
+      width: 2.1rem;
+      height: 2rem;
+      transform: rotate(180deg);
+      margin-left: 1.6rem;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:focus-within {
+      background: darken($cornflower_blue, 20%);
+      color: darken($white, 10%);
+
+      & svg {
+        fill: darken($white, 10%);
+      }
+    }
+  }
+}
