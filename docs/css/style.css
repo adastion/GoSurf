@@ -798,25 +798,12 @@ button.swiper-pagination-bullet {
           flex-direction: column;
 }
 
-.logo {
-  position: relative;
-  top: 13rem;
-  left: 0;
-  right: 0;
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-.logo__content {
-  font-size: 6rem;
-  height: 16.8rem;
-}
-.logo__content a {
-  padding: 4.8rem 3rem;
+.logo a:hover, .logo a:focus-within {
+  opacity: 0.9;
 }
 
 .menu {
-  margin-top: 22.8rem;
+  margin-top: 11.8rem;
 }
 .menu * {
   text-transform: lowercase;
