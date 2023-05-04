@@ -670,6 +670,8 @@ button.swiper-pagination-bullet {
 }
 
 .wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
   background: #171919;
 }
 .wrapper * {
@@ -781,4 +783,58 @@ button.swiper-pagination-bullet {
 }
 .subtitle--right::before {
   left: 10.4rem;
+}
+
+.sidebar {
+  position: relative;
+  max-width: 16.8rem;
+  height: 100vh;
+  border-right: 0.1rem solid #ffffff;
+}
+
+.menu * {
+  text-transform: lowercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  line-height: 1.4rem;
+}
+.menu *::first-letter {
+  text-transform: uppercase;
+}
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.8rem;
+}
+.menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.menu__link p {
+  margin-top: 0.6rem;
+}
+.menu__link svg {
+  fill: #ffffff;
+}
+.menu__link:hover p, .menu__link:focus-within p {
+  color: #4AF6CD;
+}
+.menu__link:hover svg, .menu__link:focus-within svg {
+  fill: #4AF6CD;
 }
