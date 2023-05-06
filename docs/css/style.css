@@ -785,23 +785,6 @@ button.swiper-pagination-bullet {
   left: 10.4rem;
 }
 
-.sidebar {
-  max-width: 16.8rem;
-  height: 100vh;
-  border-right: 0.1rem solid rgba(255, 255, 255, 0.25);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.logo a:hover, .logo a:focus-within {
-  opacity: 0.9;
-}
-
 .menu {
   margin-top: 11.8rem;
 }
@@ -850,4 +833,59 @@ button.swiper-pagination-bullet {
 }
 .menu__link:hover svg, .menu__link:focus-within svg {
   fill: #4AF6CD;
+}
+
+.sidebar {
+  max-width: 16.8rem;
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 5rem;
+}
+.sidebar__date {
+  margin-top: 3rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+.sidebar__big {
+  font-size: 7.2rem;
+  font-weight: 800;
+  line-height: 6.4rem;
+  text-transform: uppercase;
+}
+.sidebar__location {
+  position: relative;
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+.sidebar__location::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  width: 1.1rem;
+  height: 1.4rem;
+  background: url("../images/svg/marker.svg") no-repeat;
+  background-position: cover;
+}
+
+.logo a:hover, .logo a:focus-within {
+  opacity: 0.9;
 }
