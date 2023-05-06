@@ -1,3 +1,21 @@
 .header {
+  position: relative;
 
+  &__block-title {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    justify-items: end;
+    margin-right: 8rem;
+    margin-bottom: 11.6rem;
+    z-index: 10;
+  }
+  
+  &__title {
+
+    &:not(:last-child) {
+      margin-bottom: 2.8rem;
+    }
+  }
 }

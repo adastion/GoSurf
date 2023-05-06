@@ -785,6 +785,24 @@ button.swiper-pagination-bullet {
   left: 10.4rem;
 }
 
+.header {
+  position: relative;
+}
+.header__block-title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -ms-grid;
+  display: grid;
+  justify-items: end;
+  margin-right: 8rem;
+  margin-bottom: 11.6rem;
+  z-index: 10;
+}
+.header__title:not(:last-child) {
+  margin-bottom: 2.8rem;
+}
+
 .menu {
   margin-top: 11.8rem;
 }
