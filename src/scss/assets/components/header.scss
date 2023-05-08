@@ -11,11 +11,28 @@
     margin-bottom: 11.6rem;
     z-index: 10;
   }
-  
-  &__title {
 
-    &:not(:last-child) {
-      margin-bottom: 2.8rem;
+  &__title {
+    margin-bottom: 2.8rem;
+    
+    &--margin {
+      margin-bottom: 4.8rem;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+
+    & svg {
+      transform: rotate(180deg);
+      width: 2.5rem;
+      height: 2.1rem;
+      fill: $white;
+    }
+
+    &:hover,
+    &:focus-within {
+      opacity: 0.5;
     }
   }
 }
