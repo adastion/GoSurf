@@ -899,6 +899,8 @@ button.swiper-pagination-bullet {
   bottom: 0;
   z-index: 2;
   background: rgba(0, 0, 0, 0.2);
+  background: -o-radial-gradient(42.87% 49.23%, 62.09% 62.09%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
+  background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
 }
 
 .swiper-slide img {
@@ -949,7 +951,14 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination {
   z-index: 100;
-  right: 8rem;
+  text-align: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 4rem;
+  max-width: 92rem;
 }
 
 .swiper-pagination-bullet {
@@ -958,22 +967,48 @@ button.swiper-pagination-bullet {
   background: #ffffff;
   border-radius: 0;
   opacity: 1;
+  margin: 0;
+}
+
+.swiper-pagination-bullet-content {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper-pagination-bullet-name {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+.swiper-pagination-bullet-name::first-letter {
+  text-transform: uppercase;
 }
 
 .swiper-pagination-bullet-active {
   background: #4AF6CD;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 2rem;
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  margin: 0;
+  bottom: 7rem;
+  left: auto;
+  right: 8rem;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  width: auto;
-  bottom: 7rem;
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
 }
 
 .header {
