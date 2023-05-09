@@ -1,7 +1,22 @@
+.slider {
+}
+
 .swiper {
   width: 100%;
-  height: 50rem;
+  height: 102.4rem;
   background: $cod_gray;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    background: $black;
+    opacity: 0.2;
+  }
 }
 
 .swiper-container {
@@ -12,7 +27,6 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  // background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,4 +37,60 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 2.6rem;
+  height: 2.1rem;
+  top: 6rem;
+  right: 7.8rem;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus-within {
+    opacity: 0.5;
+  }
+}
+
+.swiper-button-prev {
+  background: url("../images/svg/arrow-left.svg") no-repeat;
+  background-position: center;
+  left: auto;
+  right: 12.5rem;
+}
+
+.swiper-button-next {
+  background: url("../images/svg/arrow-left.svg") no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+}
+
+.swiper-pagination {
+  z-index: 100;
+  right: 8rem;
+}
+
+.swiper-pagination-bullet {
+  width: 20rem;
+  height: 0.4rem;
+  background: $white;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: $cornflower_blue;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 2rem;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  width: auto;
+  bottom: 7rem;
 }

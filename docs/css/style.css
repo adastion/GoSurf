@@ -142,7 +142,7 @@ a {
 }
 
 /**
- * Swiper 9.2.4
+ * Swiper 9.3.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -150,7 +150,7 @@ a {
  *
  * Released under the MIT License
  *
- * Released on: April 21, 2023
+ * Released on: May 8, 2023
  */
 @font-face {
   font-family: "swiper-icons";
@@ -1006,8 +1006,19 @@ button.swiper-pagination-bullet {
 
 .swiper {
   width: 100%;
-  height: 50rem;
+  height: 102.4rem;
   background: #151515;
+}
+.swiper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: #000000;
+  opacity: 0.2;
 }
 
 .swiper-container {
@@ -1035,4 +1046,68 @@ button.swiper-pagination-bullet {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 2.6rem;
+  height: 2.1rem;
+  top: 6rem;
+  right: 7.8rem;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.swiper-button-prev:hover, .swiper-button-prev:focus-within,
+.swiper-button-next:hover,
+.swiper-button-next:focus-within {
+  opacity: 0.5;
+}
+
+.swiper-button-prev {
+  background: url("../images/svg/arrow-left.svg") no-repeat;
+  background-position: center;
+  left: auto;
+  right: 12.5rem;
+}
+
+.swiper-button-next {
+  background: url("../images/svg/arrow-left.svg") no-repeat;
+  background-position: center;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.swiper-pagination {
+  z-index: 100;
+  right: 8rem;
+}
+
+.swiper-pagination-bullet {
+  width: 20rem;
+  height: 0.4rem;
+  background: #ffffff;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #4AF6CD;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 2rem;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  width: auto;
+  bottom: 7rem;
 }
