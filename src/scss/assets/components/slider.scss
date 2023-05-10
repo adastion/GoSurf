@@ -104,11 +104,7 @@
 .swiper-pagination-bullet-name {
   font-size: 1.6rem;
   font-weight: 300;
-  text-transform: lowercase;
-  
-  &::first-letter {
-    text-transform: uppercase;
-  }
+  text-transform: none;
 }
 
 .swiper-pagination-bullet-active {
