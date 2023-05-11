@@ -1,4 +1,9 @@
 .slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .swiper {
@@ -46,11 +51,12 @@
 
 .swiper-button-prev,
 .swiper-button-next {
+  position: absolute;
   width: 26px;
   height: 21px;
   top: 60px;
   right: 78px;
-  z-index: 200;
+  z-index: 500;
   display: flex;
   justify-content: space-between;
   transition: all 0.3s;

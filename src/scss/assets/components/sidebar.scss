@@ -5,6 +5,8 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 5rem;
+  position: relative;
+  z-index: 200;
 
   &__date {
     margin-top: 3rem;

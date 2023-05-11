@@ -1,15 +1,16 @@
-import Swiper from "swiper/bundle";
+import Swiper, { Navigation, Pagination } from "swiper";
 
 const listNames = document.querySelectorAll("h1.header__title");
 let nameText = [...listNames].map((item) => item.textContent);
 
 const swiper = new Swiper(".swiper", {
-  effect: "fade",
-
   autoplay: {
     delay: 2000,
   },
+  effect: "fade",
 
+
+  modules: [Navigation, Pagination],
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -19,7 +20,9 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     renderBullet: function (index, className) {
       return `<span class="${className}">
-        <p class="${className}-content">0 ${index + 1} <span class="${className}-name">
+        <p class="${className}-content">0 ${
+        index + 1
+      } <span class="${className}-name">
           ${nameText[index]}</span>
         </p>
       </span>`;

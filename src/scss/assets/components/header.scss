@@ -1,7 +1,4 @@
 .header {
-  position: absolute;
-  z-index: 100;
-
   &__block-title {
     position: absolute;
     right: 0;
@@ -35,5 +32,12 @@
     &:focus-within {
       opacity: 0.5;
     }
+  }
+
+  &__map {
+    position: absolute;
+    top: -770px;
+    right: -62px;
+    z-index: 1;
   }
 }
