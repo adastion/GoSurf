@@ -11,18 +11,18 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -10.4rem;
-    width: 8rem;
-    height: 0.1rem;
+    left: -104px;
+    width: 80px;
+    height: 1px;
     background: $white;
   }
 
   &--right {
     margin-left: 0;
-    margin-right: 10.4rem;
+    margin-right: 104px;
 
     &::before {
-      left: 10.4rem;
+      left: 104px;
     }
   }
 }
