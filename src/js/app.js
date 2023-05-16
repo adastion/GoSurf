@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination } from "swiper";
+import 'animate.css';
 
 const listNames = document.querySelectorAll("h1.header__title");
 let nameText = [...listNames].map((item) => item.textContent);
