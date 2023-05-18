@@ -936,6 +936,8 @@ button.swiper-pagination-bullet {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  position: absolute;
+  z-index: 20;
 }
 .swiper-button-prev:hover, .swiper-button-prev:focus-within,
 .swiper-button-next:hover,
@@ -1052,7 +1054,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   top: -770px;
   right: -62px;
-  z-index: 11;
+  z-index: 5;
 }
 .header__map-line-animation {
   stroke-dashoffset: 600;

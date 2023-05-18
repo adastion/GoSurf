@@ -58,7 +58,8 @@
   display: flex;
   justify-content: space-between;
   transition: all 0.3s;
-  
+position: absolute;
+  z-index: 20;
 
   &:hover,
   &:focus-within {
@@ -119,7 +120,6 @@
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   margin: 0;
-
   bottom: 70px;
   left: auto;
   right: 80px;
