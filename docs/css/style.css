@@ -1054,6 +1054,22 @@ button.swiper-pagination-bullet {
   right: -62px;
   z-index: 11;
 }
+.header__map-line-animation {
+  stroke-dashoffset: 600;
+  stroke-dasharray: 600;
+  -webkit-animation: map-line 3s infinite 6s;
+          animation: map-line 3s infinite 6s;
+}
+@-webkit-keyframes map-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes map-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
 .background-text {
   font-size: 20rem;
