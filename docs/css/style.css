@@ -751,7 +751,7 @@ button.swiper-pagination-bullet {
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1920px;
   margin: 0 auto;
   background: #171919;
   position: relative;
@@ -1019,6 +1019,9 @@ button.swiper-pagination-bullet {
   margin: 0;
 }
 
+.header {
+  position: relative;
+}
 .header__block-title {
   position: absolute;
   right: 0;
@@ -1056,6 +1059,12 @@ button.swiper-pagination-bullet {
   right: -62px;
   z-index: 5;
 }
+.header__arrow-down {
+  position: absolute;
+  left: 210px;
+  bottom: 42px;
+  z-index: 12;
+}
 .header__map-line-animation {
   stroke-dashoffset: 600;
   stroke-dasharray: 600;
@@ -1073,16 +1082,47 @@ button.swiper-pagination-bullet {
   }
 }
 
-.background-text {
+.title {
+  width: 440px;
+}
+.title__text {
+  font-size: 8rem;
+  padding-top: 158px;
+  padding-left: 24.5rem;
+  position: relative;
+  z-index: 11;
+}
+.title__text::before {
+  content: "";
+  position: absolute;
+  top: 16rem;
+  right: 0.5rem;
+  width: 80px;
+  height: 1px;
+  background: #4AF6CD;
+}
+.title__text::after {
+  content: attr(data-names);
+  position: absolute;
   font-size: 20rem;
   font-weight: 800;
-  line-height: 15.6rem;
+  top: 15.2rem;
+  left: -5rem;
+  opacity: 0.02;
+  max-width: 466px;
+}
+.title--header {
   position: absolute;
   top: 0;
   left: 0;
+}
+.title--header span::before {
+  content: none;
+}
+.title--header span::after {
+  line-height: 15.6rem;
+  left: 0;
   opacity: 0.07;
-  z-index: 11;
-  max-width: 466px;
 }
 
 .menu {
@@ -1148,7 +1188,7 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   position: relative;
   z-index: 200;
 }
@@ -1193,4 +1233,13 @@ button.swiper-pagination-bullet {
 }
 .logo a:hover, .logo a:focus-within {
   opacity: 0.9;
+}
+
+.section-surf {
+  position: relative;
+  height: 1008px;
+}
+.section-surf__map {
+  margin-top: 10.6rem;
+  margin-left: 8rem;
 }

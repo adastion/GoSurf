@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+
   &__block-title {
     position: absolute;
     right: 0;
@@ -40,6 +42,13 @@
     right: -62px;
     z-index: 5;
 
+  }
+
+  &__arrow-down {
+    position: absolute;
+    left: 210px;
+    bottom: 42px;
+    z-index: 12;
   }
 
   &__map-line-animation {
