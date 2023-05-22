@@ -72,6 +72,13 @@ select {
 }
 
 @font-face {
+  font-weight: 200;
+  font-style: normal;
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans-ExtraLight/FiraSans-ExtraLight.woff2") format("woff2");
+  src: url("../fonts/FiraSans-ExtraLight/FiraSans-ExtraLight.eot") format("embedded-opentype"), url("../fonts/FiraSans-ExtraLight/FiraSans-ExtraLight.otf") format("otf"), url("../fonts/FiraSans-ExtraLight/FiraSans-ExtraLight.svg") format("svg"), url("../fonts/FiraSans-ExtraLight/FiraSans-ExtraLight.ttf") format("truetype"), url("../fonts/FiraSans-ExtraLight/FiraSans-ExtraLight.woff") format("woff");
+}
+@font-face {
   font-weight: 300;
   font-style: normal;
   font-family: "FiraSans";
@@ -751,7 +758,7 @@ button.swiper-pagination-bullet {
 }
 
 .wrapper {
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
   background: #171919;
   position: relative;
@@ -845,6 +852,7 @@ button.swiper-pagination-bullet {
   line-height: 3.2rem;
   letter-spacing: 0.733rem;
   margin-left: 10.4rem;
+  margin-right: -0.7rem;
   opacity: 0.5;
 }
 .subtitle::before {
@@ -865,6 +873,21 @@ button.swiper-pagination-bullet {
 }
 .subtitle--right::before {
   left: 104px;
+}
+
+.vertical-text {
+  max-width: 100%;
+  position: absolute;
+  right: -8rem;
+  top: 53.8rem;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.vertical-text__content {
+  font-size: 1.8rem;
+  letter-spacing: 0.8rem;
+  opacity: 0.5;
 }
 
 .slider {
@@ -1239,7 +1262,40 @@ button.swiper-pagination-bullet {
   position: relative;
   height: 1008px;
 }
+.section-surf::after {
+  content: "";
+  position: absolute;
+  top: 22rem;
+  right: -15.76rem;
+  width: 294.12px;
+  height: 349.83px;
+  background: url("../images/svg/marker.svg") no-repeat;
+  opacity: 0.02;
+}
 .section-surf__map {
   margin-top: 10.6rem;
   margin-left: 8rem;
+}
+.section-surf__map img {
+  max-width: none;
+}
+.section-surf__block-text {
+  position: absolute;
+  top: 31.2rem;
+  right: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 1.5rem 0;
+}
+.section-surf__title span {
+  font-size: 4rem;
+  font-weight: 250;
 }

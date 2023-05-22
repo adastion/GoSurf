@@ -1,0 +1,13 @@
+.vertical-text {
+  max-width: 100%;
+  position: absolute;
+  right: -8rem;
+  top: 53.8rem;
+  transform: rotate(-90deg);
+
+  &__content {
+    font-size: 1.8rem;
+    letter-spacing: 0.8rem;
+    opacity: 0.5;
+  }
+}

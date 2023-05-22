@@ -1,18 +1,41 @@
-.section-surf  {
+.section-surf {
   position: relative;
   height: 1008px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 22rem;
+    right: -15.76rem;
+    width: 294.12px;
+    height: 349.83px;
+    background: url('../images/svg/marker.svg') no-repeat;
+    opacity: 0.02;
+  }
 
   &__map {
     margin-top: 10.6rem;
     margin-left: 8rem;
-
+    
     & img {
-      
+      max-width: none;
     }
   }
 
-  &__text-bg {
-    // top: -174px;
-    // left: -42px;
+  &__block-text {
+    position: absolute;
+    top: 31.2rem;
+    right: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem 0;
+  }
+
+  &__title {
+    & span {
+      font-size: 4rem;
+      font-weight: 250;
+    }
   }
 }
