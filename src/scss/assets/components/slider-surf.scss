@@ -1,0 +1,74 @@
+.swiper {
+}
+.slider-surf {
+}
+.swiper-wrapper {
+}
+
+.slider-surf {
+  position: relative;
+
+  &__slide {
+    height: 10vh;
+    background: $woodsmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pagination {
+  }
+
+  &__pagination {
+    z-index: 200;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 920px;
+
+    & .swiper-pagination-bullet {
+      width: 24px;
+      height: 24px;
+      background: $cornflower_blue;
+      opacity: 1;
+      margin: 0;
+      box-shadow: 0 0 3.5rem $cornflower_blue;
+    }
+
+    & .swiper-pagination-bullet-active {
+      background: $cornflower_blue;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background: $cornflower_blue;
+        clip-path: polygon(50% 0%, 0 85%, 100% 85%);
+        left: 50%;
+        transform: translateX(-50%);
+        top: -45%;
+      }
+    }
+  }
+
+  &__button-prev,
+  &__button-next {
+    left: auto;
+  }
+
+  &.swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    margin: 0;
+    bottom: 70px;
+    left: auto;
+    right: 80px;
+  }
+
+  &.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0;
+  }
+}

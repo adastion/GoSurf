@@ -758,7 +758,7 @@ button.swiper-pagination-bullet {
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1920px;
   margin: 0 auto;
   background: #171919;
   position: relative;
@@ -897,19 +897,16 @@ button.swiper-pagination-bullet {
   left: 0;
   z-index: 10;
 }
-
-.swiper {
+.slider__swiper {
   width: 100%;
   height: 1024px;
   background: #151515;
 }
-
-.swiper-container {
+.slider.swiper-container {
   width: 100%;
   height: 100%;
 }
-
-.swiper-slide {
+.slider__slide {
   text-align: center;
   font-size: 1.8rem;
   display: -webkit-box;
@@ -923,7 +920,7 @@ button.swiper-pagination-bullet {
           align-items: center;
   position: relative;
 }
-.swiper-slide::after {
+.slider__slide::after {
   content: "";
   position: absolute;
   top: 0;
@@ -935,17 +932,14 @@ button.swiper-pagination-bullet {
   background: -o-radial-gradient(42.87% 49.23%, 62.09% 62.09%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
   background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
 }
-
-.swiper-slide img {
+.slider__slide img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.swiper-button-prev,
-.swiper-button-next {
+.slider__button-prev, .slider__button-next {
   width: 26px;
   height: 21px;
   top: 60px;
@@ -962,28 +956,23 @@ button.swiper-pagination-bullet {
   position: absolute;
   z-index: 20;
 }
-.swiper-button-prev:hover, .swiper-button-prev:focus-within,
-.swiper-button-next:hover,
-.swiper-button-next:focus-within {
+.slider__button-prev:hover, .slider__button-prev:focus-within, .slider__button-next:hover, .slider__button-next:focus-within {
   opacity: 0.5;
 }
-
-.swiper-button-prev {
+.slider__button-prev {
   background: url("../images/svg/arrow-left.svg") no-repeat;
   background-position: center;
   left: auto;
   right: 125px;
 }
-
-.swiper-button-next {
+.slider__button-next {
   background: url("../images/svg/arrow-left.svg") no-repeat;
   background-position: center;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-
-.swiper-pagination {
+.slider__pagination {
   z-index: 100;
   text-align: start;
   display: -webkit-box;
@@ -994,8 +983,7 @@ button.swiper-pagination-bullet {
   gap: 40px;
   max-width: 920px;
 }
-
-.swiper-pagination-bullet {
+.slider__pagination .swiper-pagination-bullet {
   width: 200px;
   height: 4px;
   background: #ffffff;
@@ -1003,8 +991,7 @@ button.swiper-pagination-bullet {
   opacity: 1;
   margin: 0;
 }
-
-.swiper-pagination-bullet-content {
+.slider__pagination .swiper-pagination-bullet-content {
   font-size: 2.4rem;
   font-weight: 800;
   margin-top: 1rem;
@@ -1018,27 +1005,23 @@ button.swiper-pagination-bullet {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.swiper-pagination-bullet-name {
+.slider__pagination .swiper-pagination-bullet-name {
   font-size: 1.6rem;
   font-weight: 300;
   text-transform: none;
 }
-
-.swiper-pagination-bullet-active {
+.slider__pagination .swiper-pagination-bullet-active {
   background: #4AF6CD;
 }
-
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
+.slider.swiper-horizontal > .swiper-pagination-bullets,
+.slider .swiper-pagination-bullets.swiper-pagination-horizontal {
   margin: 0;
   bottom: 70px;
   left: auto;
   right: 80px;
 }
-
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.slider.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
 }
 
@@ -1273,11 +1256,16 @@ button.swiper-pagination-bullet {
   opacity: 0.02;
 }
 .section-surf__map {
-  margin-top: 10.6rem;
-  margin-left: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .section-surf__map img {
   max-width: none;
+  padding-top: 11.6rem;
 }
 .section-surf__block-text {
   position: absolute;
@@ -1298,4 +1286,72 @@ button.swiper-pagination-bullet {
 .section-surf__title span {
   font-size: 4rem;
   font-weight: 250;
+}
+
+.slider-surf {
+  position: relative;
+}
+.slider-surf__slide {
+  height: 10vh;
+  background: #171919;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slider-surf__pagination {
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+  max-width: 920px;
+}
+.slider-surf__pagination .swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+  background: #4AF6CD;
+  opacity: 1;
+  margin: 0;
+  -webkit-box-shadow: 0 0 3.5rem #4AF6CD;
+          box-shadow: 0 0 3.5rem #4AF6CD;
+}
+.slider-surf__pagination .swiper-pagination-bullet-active {
+  background: #4AF6CD;
+  position: relative;
+}
+.slider-surf__pagination .swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #4AF6CD;
+  -webkit-clip-path: polygon(50% 0%, 0 85%, 100% 85%);
+          clip-path: polygon(50% 0%, 0 85%, 100% 85%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -45%;
+}
+.slider-surf__button-prev, .slider-surf__button-next {
+  left: auto;
+}
+.slider-surf.swiper-horizontal > .swiper-pagination-bullets,
+.slider-surf .swiper-pagination-bullets.swiper-pagination-horizontal {
+  margin: 0;
+  bottom: 70px;
+  left: auto;
+  right: 80px;
+}
+.slider-surf.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.slider-surf .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
 }

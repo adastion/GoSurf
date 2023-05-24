@@ -3,6 +3,8 @@ import Swiper, { Navigation, Pagination } from "swiper";
 const listNames = document.querySelectorAll("h1.header__title");
 let nameText = [...listNames].map((item) => item.textContent);
 
+
+// header
 const swiper = new Swiper(".swiper", {
   autoplay: {
     delay: 2000,
@@ -29,3 +31,21 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+// surf
+const swiperTwo = new Swiper(".slider-surf", {
+  modules: [Navigation, Pagination],
+  slidesPerView: 4,
+  spaceBetween: 0,
+  freeMode: true,
+
+  navigation: {
+    nextEl: ".slider-surf__button-next",
+    prevEl: ".slider-surf__button-prev",
+  },
+  pagination: {
+    el: ".slider-surf__pagination",
+    clickable: true,
+  },
+});
+

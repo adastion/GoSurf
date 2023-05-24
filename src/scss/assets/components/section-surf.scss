@@ -14,11 +14,12 @@
   }
 
   &__map {
-    margin-top: 10.6rem;
-    margin-left: 8rem;
+    display: flex;
+    justify-content: center;
     
     & img {
       max-width: none;
+      padding-top: 11.6rem;
     }
   }
 
