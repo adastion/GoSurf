@@ -40,6 +40,7 @@ const swiperSurf = new Swiper(".swiper2", {
   effect: "fade",
 
   slidesPerView: 4,
+  spaceBetween: 0,
   centeredSlides: true,
 
   modules: [Navigation, Pagination],
@@ -52,7 +53,7 @@ const swiperSurf = new Swiper(".swiper2", {
     el: ".swiper-pagination2",
     clickable: true,
     renderBullet: function (index, className) {
-      return `<span class="${className} ${className}--${index + 1}">2</span>`
+      return `<span class="${className} ${className}--${index + 1}"></span>`
     },
   },
 });

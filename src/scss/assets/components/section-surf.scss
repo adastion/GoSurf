@@ -1,6 +1,7 @@
 .section-surf {
   position: relative;
   height: 1634px;
+  overflow: hidden;
 
   &::after {
     content: '';
