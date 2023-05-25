@@ -22,7 +22,7 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     renderBullet: function (index, className) {
       return `<span class="${className}">
-        <p class="${className}-content">0 ${
+              <p class="${className}-content">0 ${
         index + 1
       } <span class="${className}-name">
           ${nameText[index]}</span>
@@ -33,19 +33,28 @@ const swiper = new Swiper(".swiper", {
 });
 
 // surf
-const swiperTwo = new Swiper(".slider-surf", {
-  modules: [Navigation, Pagination],
-  slidesPerView: 4,
-  spaceBetween: 0,
-  freeMode: true,
-
-  navigation: {
-    nextEl: ".slider-surf__button-next",
-    prevEl: ".slider-surf__button-prev",
+const swiperSurf = new Swiper(".swiper2", {
+  autoplay: {
+    delay: 2000,
   },
+  effect: "fade",
+
+  slidesPerView: 4,
+  centeredSlides: true,
+
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
   pagination: {
-    el: ".slider-surf__pagination",
+    el: ".swiper-pagination2",
     clickable: true,
+    renderBullet: function (index, className) {
+      return `<span class="${className} ${className}--${index + 1}">2</span>`
+    },
   },
 });
 
+console.log(swiperSurf.pagination.bullets)
