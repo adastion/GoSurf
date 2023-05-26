@@ -1243,7 +1243,7 @@ button.swiper-pagination-bullet {
 
 .section-surf {
   position: relative;
-  height: 1634px;
+  height: 2000px;
   overflow: hidden;
 }
 .section-surf::after {
@@ -1351,9 +1351,35 @@ button.swiper-pagination-bullet {
   bottom: -62px;
   left: 1408px;
 }
-.swiper2 .swiper-slide {
+.swiper2 .swiper-slide * {
   width: 100%;
   height: 750px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.swiper2 .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #4AF6CD;
+  height: 750px;
+}
+.swiper2 .swiper-slide--1 {
+  -webkit-transform: translateY(32px);
+      -ms-transform: translateY(32px);
+          transform: translateY(32px);
+}
+.swiper2 .swiper-slide--2 {
+  -webkit-transform: translateY(90px);
+      -ms-transform: translateY(90px);
+          transform: translateY(90px);
+}
+.swiper2 .swiper-wrapper {
+  margin-top: 100px;
 }

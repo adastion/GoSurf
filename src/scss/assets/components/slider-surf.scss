@@ -71,13 +71,29 @@
     left: 1408px;
   }
 
-  & .swiper-slide {
+  & .swiper-slide * {
     width: 100%;
     height: 750px;
     object-fit: cover;
   }
-}
-.swiper-pagination {
-}
-.swiper-pagination2 {
+
+  & .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $cornflower_blue;
+    height: 750px;
+
+    &--1 {
+      transform: translateY(32px);
+    }
+
+    &--2 {
+      transform: translateY(90px);
+    }
+  }
+
+  & .swiper-wrapper {
+    margin-top: 100px;
+  }
 }
