@@ -43,7 +43,7 @@ const swiperSurf = new Swiper(".swiper2", {
   spaceBetween: 0,
   centeredSlides: true,
 
-  loop: true,
+  // loop: true,
 
   modules: [Navigation, Pagination],
   navigation: {
