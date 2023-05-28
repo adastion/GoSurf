@@ -73,9 +73,11 @@
 
   & .swiper-slide {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     height: 750px;
+    background: $blue_ribbon;
+    position: relative;
 
     &--1 {
       transform: translateY(32px);
@@ -86,7 +88,8 @@
     }
 
     &__inner {
-      position: relative;
+      // position: absolute;
+      display: none;
 
       &::before {
         content: "";
@@ -100,25 +103,28 @@
     }
 
     &__title {
-      position: absolute;
-      top: 7.2rem;
-      left: 4rem;
+      // position: absolute;
+      // top: 7.2rem;
+      // left: 4rem;
+      margin-top: 7.2rem;
+      margin-left: 4rem;
       font-size: 4rem;
       line-height: 3.6rem;
       width: 15rem;
     }
 
     &__text {
-      position: static;
-
-      & > * {
+      & .vertical-text__content {
+        position: absolute;
+        top: 500px;
+        left: -80px;
+        transform: rotate(-90deg);
         opacity: 1;
       }
     }
 
     &__btn {
       justify-content: center;
-      transform: translateY(-11.8rem);
     }
   }
 
