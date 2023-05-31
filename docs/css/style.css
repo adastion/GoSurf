@@ -1398,13 +1398,16 @@ button.swiper-pagination-bullet {
   line-height: 3.6rem;
   width: 15rem;
 }
-.swiper2 .swiper-slide__text .vertical-text__content {
-  position: absolute;
-  top: 500px;
-  left: -80px;
+.swiper2 .swiper-slide__text {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  top: 500px;
+  left: -80px;
+  margin: 0;
+  padding: 0;
+}
+.swiper2 .swiper-slide__text .vertical-text__content {
   opacity: 1;
 }
 .swiper2 .swiper-slide__btn {
@@ -1423,4 +1426,18 @@ button.swiper-pagination-bullet {
 }
 .swiper2 .swiper-wrapper {
   margin-top: 100px;
+}
+
+.swiper-pagination-card__btn {
+  cursor: pointer;
+}
+.swiper-pagination-card__btn svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  fill: #ffffff;
+}
+.swiper-pagination-card__icon {
+  fill: #4AF6CD;
+  stroke: #4AF6CD;
 }

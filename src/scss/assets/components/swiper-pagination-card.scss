@@ -1,0 +1,30 @@
+.swiper-pagination-card {
+  &__title {
+  }
+
+  &__btn {
+    cursor: pointer;
+
+    & svg {
+      transform: rotate(180deg);
+      fill: $white;
+    }
+  }
+
+  &__name-country {
+  }
+
+  &__list {
+  }
+
+  &__icon {
+    fill: $cornflower_blue;
+    stroke: $cornflower_blue;
+  }
+
+  &__data {
+  }
+
+  &__name-data {
+  }
+}

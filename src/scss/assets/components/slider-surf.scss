@@ -123,11 +123,17 @@
     }
 
     &__text {
+      // height: 100%;
+      // position: relative;
+      // z-index: 2;
+      transform: rotate(-90deg);
+      top: 500px;
+      left: -80px;
+      margin: 0;
+      padding: 0;
+
       & .vertical-text__content {
-        position: absolute;
-        top: 500px;
-        left: -80px;
-        transform: rotate(-90deg);
+        // position: absolute;
         opacity: 1;
       }
     }
