@@ -1,9 +1,9 @@
 .vertical-text {
-  // max-width: 100%;
-  // position: absolute;
-  // right: -8rem;
-  // top: 53.8rem;
-  // transform: rotate(-90deg);
+  height: 0;
+  width: 0;
+  transform: rotate(-90deg);
+  position: absolute;
+  white-space: nowrap;
 
   &__content {
     font-size: 1.8rem;

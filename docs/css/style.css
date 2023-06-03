@@ -875,6 +875,15 @@ button.swiper-pagination-bullet {
   left: 104px;
 }
 
+.vertical-text {
+  height: 0;
+  width: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  white-space: nowrap;
+}
 .vertical-text__content {
   font-size: 1.8rem;
   letter-spacing: 0.8rem;
@@ -1403,17 +1412,8 @@ button.swiper-pagination-bullet {
   width: 15rem;
 }
 .swiper2 .swiper-slide__text {
-  height: 0;
-  width: 0;
-  margin: 0;
-  padding: 0;
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  position: absolute;
   left: 4rem;
   bottom: 8rem;
-  white-space: nowrap;
 }
 .swiper2 .swiper-slide__text .vertical-text__content {
   opacity: 1;
@@ -1436,8 +1436,35 @@ button.swiper-pagination-bullet {
   margin-top: 100px;
 }
 
+.swiper-pagination-card {
+  max-width: 300px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2.8rem 3.8rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem 0;
+  border-radius: 0.6rem;
+  position: relative;
+}
+.swiper-pagination-card__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  position: relative;
+}
+.swiper-pagination-card__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  width: 8rem;
+  height: 0.1rem;
+  background: #4AF6CD;
+}
 .swiper-pagination-card__btn {
   cursor: pointer;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 .swiper-pagination-card__btn svg {
   -webkit-transform: rotate(180deg);
@@ -1445,7 +1472,45 @@ button.swiper-pagination-bullet {
           transform: rotate(180deg);
   fill: #ffffff;
 }
+.swiper-pagination-card__name-country {
+  font-size: 1.6rem;
+  text-transform: lowercase;
+}
+.swiper-pagination-card__name-country::first-letter {
+  text-transform: uppercase;
+}
+.swiper-pagination-card__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+.swiper-pagination-card__list li {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 0.7rem;
+}
 .swiper-pagination-card__icon {
   fill: #4AF6CD;
   stroke: #4AF6CD;
+}
+.swiper-pagination-card__data {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.swiper-pagination-card__name-data {
+  opacity: 0.7;
+  font-weight: 300;
+}
+.swiper-pagination-card__vertical-text {
+  right: -0.5rem;
+  bottom: -20%;
 }

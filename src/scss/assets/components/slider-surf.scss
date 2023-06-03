@@ -98,7 +98,7 @@
       bottom: 0;
       z-index: -1;
       height: 100%;
-      
+
       &::before {
         content: "";
         position: absolute;
@@ -109,13 +109,11 @@
         background: rgba($shark, 0.8);
         z-index: 10;
       }
-      
+
       & img {
         aspect-ratio: 9/16;
         width: 480px;
         object-fit: cover;
-        // max-width: none;
-        // width: 100%;
       }
     }
 
@@ -128,15 +126,8 @@
     }
 
     &__text {
-      height: 0;
-      width: 0;
-      margin: 0;
-      padding: 0;
-      transform: rotate(-90deg);
-      position: absolute;
       left: 4rem;
       bottom: 8rem;
-      white-space: nowrap;
 
       & .vertical-text__content {
         opacity: 1;

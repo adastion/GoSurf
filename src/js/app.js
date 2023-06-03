@@ -1,7 +1,10 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 
 const listNames = document.querySelectorAll("h1.header__title");
-let nameText = [...listNames].map((item) => item.textContent);
+const nameText = [...listNames].map((item) => item.textContent);
+
+const cards = document.querySelectorAll('.swiper-pagination-card')
+const cardsSurf = [...cards].map(item => item.innerHTML);
 
 
 // header
@@ -22,9 +25,7 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     renderBullet: function (index, className) {
       return `<span class="${className}">
-              <p class="${className}-content">0 ${
-        index + 1
-      } <span class="${className}-name">
+              <p class="${className}-content">0 ${index + 1} <span class="${className}-name">
           ${nameText[index]}</span>
         </p>
       </span>`;
@@ -55,9 +56,13 @@ const swiperSurf = new Swiper(".swiper2", {
     el: ".swiper-pagination2",
     clickable: true,
     renderBullet: function (index, className) {
-      return `<span class="${className} ${className}--${index + 1}"></span>`
+
+      return `<div class="${className} ${className}--${index + 1}">
+      </div>`
+      // ${cardsSurf[index]}
     },
   },
 });
+console.log(cardsSurf);
 
 console.log(swiperSurf.pagination.bullets)
