@@ -14,6 +14,7 @@
     <header class="header">
       <div class="container">
         <aside class="menu">
+          <button class="menu__btn-burger"></button>
           <div class="logo">
             <a href="#"><img src="images/Logo.png" alt="logo"></a>
           </div>
@@ -24,48 +25,52 @@
                   <svg class="menu__icon">
                     <use xlink:href="images/sprite.svg#surf"></use>
                   </svg>
+                  <span class="menu__name">surf</span>
                 </a>
-                <span class="menu__name">surf</span>
               </li>
               <li class="menu__item">
                 <a href="#">
                   <svg class="menu__icon">
                     <use xlink:href="images/sprite.svg#travel"></use>
                   </svg>
+                  <span class="menu__name">travel</span>
                 </a>
-                <span class="menu__name">travel</span>
               </li>
               <li class="menu__item">
                 <a href="#">
                   <svg class="menu__icon">
                     <use xlink:href="images/sprite.svg#camp"></use>
                   </svg>
+                  <span class="menu__name">sleep</span>
                 </a>
-                <span class="menu__name">sleep</span>
               </li>
               <li class="menu__item">
                 <a href="#">
                   <svg class="menu__icon">
                     <use xlink:href="images/sprite.svg#surfboard"></use>
                   </svg>
+                  <span class="menu__name">shop</span>
                 </a>
-                <span class="menu__name">shop</span>
               </li>
             </ul>
           </nav>
           <div class="menu__search">
-            <!-- <input type="search"> -->
-            <svg>
+            <form action="/">
+              <input type="search" placeholder="Search">
+            </form>
+            <svg class="menu__icon">
               <use xlink:href="images/sprite.svg#search"></use>
             </svg>
           </div>
-          <div class="menu__time">20</div>
-          <div class="menu__date">06 | 2023</div>
-          <div class="location">
-            <svg>
-              <use xlink:href="images/sprite.svg#marker"></use>
-            </svg>
-            <span>California</span>
+          <div class="menu__wrap-date">
+            <div class="menu__time">20</div>
+            <div class="menu__date">06 | 2023</div>
+            <div class="menu__location">
+              <svg>
+                <use xlink:href="images/sprite.svg#marker"></use>
+              </svg>
+              <span>california</span>
+            </div>
           </div>
         </aside>
       </div>
