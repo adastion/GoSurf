@@ -15,7 +15,7 @@ import gulpSass from "gulp-sass";
 import dartSass from "sass";
 import svgSprite from "gulp-svg-sprite";
 import svgmin from "gulp-svgmin";
-import webp from "gulp-webp";
+// import webp from "gulp-webp";
 import webpack from "webpack-stream";
 import { deleteAsync } from "del";
 
@@ -154,10 +154,10 @@ const images = () => {
       )
     )
     .pipe(imagemin())
-    .pipe(newer(path.build.images))
-    .pipe(webp())
-    .pipe(gulp.dest(path.build.images))
-    .pipe(gulp.src(path.src.images))
+    // .pipe(newer(path.build.images))
+    // .pipe(webp())
+    // .pipe(gulp.dest(path.build.images))
+    // .pipe(gulp.src(path.src.images))
     .pipe(newer(path.build.images))
     .pipe(
       imagemin({
@@ -183,7 +183,7 @@ const svgSpriteBuild = () => {
     .pipe(
       svgmin({
         js2svg: {
-          pretty: true,
+          pretty: false,
         },
       })
     )
@@ -192,7 +192,7 @@ const svgSpriteBuild = () => {
         run: ($) => {
           $("[fill]").removeAttr("fill");
           $("[stroke]").removeAttr("stroke");
-          // $("[style]").removeAttr("style");
+          $("[style]").removeAttr("style");
         },
         parserOptions: { xmlMode: true },
       })
@@ -225,7 +225,7 @@ const sprite = gulp.series(svgSpriteBuild);
 // Построение сценариев выполнение задач
 const dev = gulp.series(
   reset,
-  sprite,
+  // sprite,
   mainTasks,
   gulp.parallel(watcher, server)
 );
