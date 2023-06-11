@@ -8,6 +8,8 @@
   border-right: 1px solid $white;
   text-transform: lowercase;
   padding-bottom: 45px;
+  position: relative;
+  z-index: 20;
 
   @include desktop-and-less {
     position: relative;

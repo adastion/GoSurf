@@ -139,6 +139,7 @@ a {
   margin: 0 auto;
   background: #171919;
   overflow: hidden;
+  position: relative;
 }
 
 .logo:hover, .logo:focus {
@@ -162,6 +163,8 @@ a {
   border-right: 1px solid #ffffff;
   text-transform: lowercase;
   padding-bottom: 45px;
+  position: relative;
+  z-index: 20;
 }
 @media (max-width: 1200px) {
   .menu {
@@ -273,4 +276,45 @@ a {
 .menu__location svg {
   width: 11px;
   height: 13px;
+}
+
+.title-block {
+  margin-top: 156px;
+}
+.title-block__text {
+  font-size: 80px;
+  font-weight: 800;
+  padding-left: 240px;
+  position: relative;
+}
+.title-block__text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 1px;
+  background: #4AF6CD;
+}
+.title-block__text::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 38px;
+  left: -56px;
+  font-size: 200px;
+  line-height: 156px;
+  color: #ffffff;
+  opacity: 0.02;
+}
+.title-block--header {
+  position: absolute;
+  margin: 0;
+  z-index: 10;
+}
+.title-block--header > *::before {
+  content: none;
+}
+.title-block--header > *::after {
+  top: 0;
+  left: 0;
 }
