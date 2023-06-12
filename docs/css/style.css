@@ -185,6 +185,11 @@ a {
   background: red;
   display: none;
 }
+@media (max-width: 1200px) {
+  .menu__btn-burger {
+    display: block;
+  }
+}
 .menu *::first-letter {
   text-transform: uppercase;
 }
@@ -334,6 +339,7 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  gap: 10px 0;
 }
 .title-block-line__subtitle {
   position: relative;
