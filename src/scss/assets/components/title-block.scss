@@ -34,7 +34,7 @@
     margin: 0;
     z-index: 10;
 
-    & > * {
+    .title-block__text {
       &::before {
         content: none;
       }
