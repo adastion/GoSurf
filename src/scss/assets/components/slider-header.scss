@@ -1,0 +1,44 @@
+.slider-header {
+
+    & .swiper-wrapper {
+
+    }
+
+    & .swiper-slide {
+      position: relative;
+       
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0F0F0F 100%);
+      }
+
+      & img {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+
+      }
+
+      & .slide-title-wrapper {
+        position: absolute;
+        right: 84px;
+        bottom: 118px;
+        z-index: 1;
+        display: grid;
+        gap: 50px;
+      }
+    }
+    
+    &.swiper-pagination {
+    }
+    &.swiper-button-prev {
+    }
+    &.swiper-button-next {
+    }
+}

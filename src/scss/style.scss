@@ -4,11 +4,16 @@
 @import "assets/base/mixins";
 @import "assets/base/base";
 @import "../../node_modules/animate.css/animate.css";
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation/navigation";
+@import "../../node_modules/swiper/modules/pagination/pagination";
 
 @import "assets/components/wrapper";
 @import "assets/components/container";
 @import "assets/components/logo";
+@import "assets/components/buttons";
 @import "assets/components/header";
 @import "assets/components/menu";
 @import "assets/components/title-block";
 @import "assets/components/title-block-line";
+@import "assets/components/slider-header";
