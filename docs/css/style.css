@@ -1065,3 +1065,21 @@ button.swiper-pagination-bullet {
   display: grid;
   gap: 50px;
 }
+.slider-header .swiper-button-prev, .slider-header .swiper-button-next {
+  width: 25px;
+  height: 21px;
+  background: red;
+  background: url("../images/svg/arrow-left.svg") no-repeat;
+  top: 70px;
+  z-index: 30;
+}
+.slider-header .swiper-button-prev {
+  left: auto;
+  right: 125px;
+}
+.slider-header .swiper-button-next {
+  right: 84px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}

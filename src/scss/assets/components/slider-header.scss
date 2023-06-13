@@ -35,10 +35,26 @@
       }
     }
     
-    &.swiper-pagination {
+    & .swiper-pagination {
     }
-    &.swiper-button-prev {
+
+    & .swiper-button-prev,
+    & .swiper-button-next {
+      width: 25px;
+      height: 21px;
+      background: red;
+      background: url('../images/svg/arrow-left.svg')no-repeat;
+      top: 70px;
+      z-index: 30;
     }
-    &.swiper-button-next {
+
+    & .swiper-button-prev {
+      left: auto;
+      right: 125px;
+    }
+
+    & .swiper-button-next {
+      right: 84px;
+      transform: rotate(180deg);
     }
 }
