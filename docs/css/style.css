@@ -760,6 +760,10 @@ button.swiper-pagination-bullet {
 .container {
   padding-right: 84px;
 }
+.container--header {
+  position: absolute;
+  height: 100%;
+}
 
 .logo:hover, .logo:focus {
   opacity: 0.6;
@@ -798,6 +802,10 @@ button.swiper-pagination-bullet {
           transform: rotate(180deg);
 }
 
+.header {
+  position: relative;
+}
+
 .menu {
   font-size: 12px;
   display: -webkit-box;
@@ -816,6 +824,7 @@ button.swiper-pagination-bullet {
   text-transform: lowercase;
   padding-bottom: 45px;
   position: relative;
+  height: inherit;
   z-index: 20;
 }
 @media (max-width: 1200px) {
