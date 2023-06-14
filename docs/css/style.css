@@ -1046,8 +1046,8 @@ button.swiper-pagination-bullet {
   right: 0;
   left: 0;
   bottom: 0;
-  background: -o-radial-gradient(42.87% 49.23%, 62.09% 62.09%, rgba(34, 34, 34, 0.426517) 0%, #0F0F0F 100%);
-  background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0F0F0F 100%);
+  background: -o-radial-gradient(42.87% 49.23%, 62.09% 62.09%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
+  background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
 }
 .slider-header .swiper-slide img {
   width: 100%;
@@ -1065,19 +1065,67 @@ button.swiper-pagination-bullet {
   display: grid;
   gap: 50px;
 }
-.slider-header .swiper-button-prev, .slider-header .swiper-button-next {
+.slider-header .swiper-pagination-bullet {
+  width: 200px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 0;
+  opacity: 1;
+  text-align: start;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+.slider-header .swiper-pagination-bullet > * {
+  margin-top: 6px;
+}
+.slider-header .swiper-pagination-bullet-name {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: none;
+}
+.slider-header .swiper-pagination-bullet-active {
+  background: #4AF6CD;
+}
+.slider-header .swiper-pagination-horizontal {
+  right: 84px;
+  bottom: 80px;
+  left: auto;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 40px;
+}
+.slider-header .swiper-pagination-horizontal > * {
+  margin: 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
   width: 25px;
   height: 21px;
-  background: red;
   background: url("../images/svg/arrow-left.svg") no-repeat;
   top: 70px;
   z-index: 30;
 }
-.slider-header .swiper-button-prev {
+
+.swiper-button-prev {
   left: auto;
   right: 125px;
 }
-.slider-header .swiper-button-next {
+
+.swiper-button-next {
   right: 84px;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
