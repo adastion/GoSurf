@@ -1,9 +1,4 @@
 .slider-header {
-
-  & .swiper-wrapper {
-    
-  }
-
   & .swiper-slide {
     position: relative;
 
@@ -88,6 +83,7 @@
   height: 21px;
   background: url("../images/svg/arrow-left.svg") no-repeat;
   top: 70px;
+  position: absolute;
   z-index: 30;
 }
 

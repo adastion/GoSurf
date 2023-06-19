@@ -805,6 +805,31 @@ button.swiper-pagination-bullet {
 .header {
   position: relative;
 }
+.header__map {
+  position: absolute;
+  top: -772px;
+  right: -76px;
+  z-index: 25;
+}
+.header__map path[fill-rule] {
+  fill: #4AF6CD;
+}
+.header__line {
+  stroke-dashoffset: 642px;
+  stroke-dasharray: 642px;
+  -webkit-animation: map-line 3s infinite 6s;
+          animation: map-line 3s infinite 6s;
+}
+@-webkit-keyframes map-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes map-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
 .menu {
   font-size: 12px;
@@ -1126,6 +1151,7 @@ button.swiper-pagination-bullet {
   height: 21px;
   background: url("../images/svg/arrow-left.svg") no-repeat;
   top: 70px;
+  position: absolute;
   z-index: 30;
 }
 
