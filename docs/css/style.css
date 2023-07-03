@@ -1176,9 +1176,8 @@ button.swiper-pagination-bullet {
   border-radius: 6px;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  position: relative;
-  top: -500px;
-  left: 50%;
+  position: absolute;
+  display: none;
 }
 .card-data__title {
   font-size: 18px;
@@ -1233,7 +1232,7 @@ button.swiper-pagination-bullet {
 .card-data__icon {
   fill: #4AF6CD;
 }
-.card-data__icon #strokeColor1, .card-data__icon #strokeColor2, .card-data__icon #strokeColor3 {
+.card-data__icon .stroke-color-1, .card-data__icon .stroke-color-2, .card-data__icon .stroke-color-3 {
   stroke: #4AF6CD;
 }
 .card-data__data {
@@ -1257,23 +1256,103 @@ button.swiper-pagination-bullet {
   right: -146px;
 }
 .surf__map-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 20px 0 60px 0;
-}
-.surf__map {
+  max-width: 1246px;
+  min-height: 634px;
+  margin: 0 auto;
+  margin-bottom: 58px;
+  background: url("../images/svg/map-surf-not-dot.svg") no-repeat;
+  background-position: center;
   position: relative;
 }
-.surf__map .surf__doted {
-  fill: #4AF6CD;
+.surf__list-point {
+  max-width: 1246px;
+  min-height: inherit;
+  position: relative;
+}
+.surf__item {
+  width: 30%;
+  position: absolute;
+}
+.surf__point {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #4AF6CD;
   -webkit-box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
           box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+  cursor: pointer;
+  position: relative;
 }
-.surf__map .surf__doted::before {
+.surf__point::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: #4AF6CD;
+  -webkit-clip-path: polygon(50% 0%, 0% 102%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 102%, 100% 100%);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  display: none;
+}
+.surf__point:hover::before, .surf__point:focus-within::before {
+  display: block;
+}
+.surf__point:hover + .card-data, .surf__point:focus-within + .card-data {
+  display: block;
+  z-index: 30;
+  top: -236px;
+  left: 15px;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.surf__point:hover + .card-data:first-child, .surf__point:focus-within + .card-data:first-child {
+  left: 200px;
+}
+.surf__point--1 {
+  left: 33px;
+  top: 329px;
+}
+.surf__point--2 {
+  top: 265px;
+  left: 155px;
+}
+.surf__point--3 {
+  top: 312px;
+  left: 358px;
+}
+.surf__point--4 {
+  top: 495px;
+  left: 434px;
+}
+.surf__point--5 {
+  top: 208px;
+  left: 554px;
+}
+.surf__point--6 {
+  top: 550px;
+  left: 662px;
+}
+.surf__point--7 {
+  top: 386px;
+  left: 820px;
+}
+.surf__point--8 {
+  top: 301px;
+  left: 1042px;
+}
+.surf__point--9 {
+  top: 494px;
+  left: 1112px;
+}
+.surf__map::before {
   content: "";
   position: absolute;
   top: 0;

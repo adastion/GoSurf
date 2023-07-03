@@ -12,27 +12,125 @@
   }
 
   &__map-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 60px 0;
+    max-width: 1246px;
+    min-height: 634px;
+    margin: 0 auto;
+    margin-bottom: 58px;
+    background: url("../images/svg/map-surf-not-dot.svg") no-repeat;
+    background-position: center;
+    position: relative;
+  }
+
+  &__list-point {
+    max-width: 1246px;
+    min-height: inherit;
+    position: relative;
+  }
+
+  &__item {
+    width: 30%;
+    position: absolute;
+  }
+
+  &__point {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: $cornflower_blue;
+    box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 24px;
+      background: $cornflower_blue;
+      clip-path: polygon(50% 0%, 0% 102%, 100% 100%);
+      transition: all 0.3s;
+      display: none;
+    }
+
+    &:hover,
+    &:focus-within {
+      &::before {
+        display: block;
+      }
+
+      & + .card-data {
+        display: block;
+        z-index: 30;
+        top: -236px;
+        left: 15px;
+        transform: translate(-50%);
+
+        &:first-child {
+          left: 200px;
+        }
+      }
+    }
+
+    &--1 {
+      left: 33px;
+      top: 329px;
+    }
+
+    &--2 {
+      top: 265px;
+      left: 155px;
+    }
+
+    &--3 {
+      top: 312px;
+      left: 358px;
+    }
+
+    &--4 {
+      top: 495px;
+      left: 434px;
+    }
+
+    &--5 {
+      top: 208px;
+      left: 554px;
+    }
+
+    &--6 {
+      top: 550px;
+      left: 662px;
+    }
+
+    &--7 {
+      top: 386px;
+      left: 820px;
+    }
+
+    &--8 {
+      top: 301px;
+      left: 1042px;
+    }
+
+    &--9 {
+      top: 494px;
+      left: 1112px;
+    }
   }
 
   &__map {
-    position: relative;
-    & .surf__doted {
-      fill: $cornflower_blue;
+    // position: relative;
 
-      box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 28px;
-        height: 28px;
-        background: red;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      background: red;
     }
   }
 }

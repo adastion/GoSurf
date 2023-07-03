@@ -5,9 +5,8 @@
   width: 100%;
   border-radius: 6px;
   box-shadow: 0 4px 4px rgba($black, 0.25);
-  position: relative;
-  top: -500px;
-  left: 50%;
+  position: absolute;
+  display: none;
 
   &__title {
     font-size: 18px;
@@ -34,7 +33,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -8px;
       width: 80px;
@@ -58,9 +57,9 @@
   &__icon {
     fill: $cornflower_blue;
 
-    & #strokeColor1,
-    & #strokeColor2,
-    & #strokeColor3 {
+    & .stroke-color-1,
+    & .stroke-color-2,
+    & .stroke-color-3 {
       stroke: $cornflower_blue;
     }
   }
