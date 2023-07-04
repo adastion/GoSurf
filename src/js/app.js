@@ -35,6 +35,7 @@ const swiperCardsSurf = new Swiper(".slider-cards-beach", {
   modules: [Navigation, Pagination],
   slidesPerView: 4,
   centeredSlides: true,
+  loop: true,
 
   navigation: {
     nextEl: ".swiper-button-next",
