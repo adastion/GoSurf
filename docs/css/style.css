@@ -1071,6 +1071,64 @@ button.swiper-pagination-bullet {
   font-size: 80px;
 }
 
+.btn-container {
+  font-size: 40px;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+.btn-container__text {
+  display: inline-block;
+  position: relative;
+}
+.btn-container__text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 1px;
+  background: #ffffff;
+  right: -30px;
+}
+.btn-container__btn {
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #4AF6CD;
+  padding: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+.btn-container__btn:hover, .btn-container__btn:focus {
+  opacity: 0.7;
+}
+.btn-container__btn svg {
+  fill: #ffffff;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
 .slider-header .swiper-slide {
   position: relative;
 }
@@ -1352,12 +1410,28 @@ button.swiper-pagination-bullet {
   top: 494px;
   left: 1112px;
 }
-.surf__map::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 28px;
-  height: 28px;
-  background: red;
+.slider-cards-beach__subtitle {
+  width: 0;
+  height: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  letter-spacing: 8px;
+  white-space: nowrap;
+}
+.slider-cards-beach .swiper-wrapper {
+  margin-top: 64px;
+}
+.slider-cards-beach .swiper-slide {
+  width: 480px;
+  position: relative;
+}
+.slider-cards-beach .swiper-slide img {
+  width: 480px;
+  aspect-ratio: 9/16;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slider-cards-beach .swiper-button-prev, .slider-cards-beach .swiper-button-next {
+  top: 24px;
 }

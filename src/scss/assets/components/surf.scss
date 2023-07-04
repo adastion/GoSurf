@@ -120,17 +120,7 @@
     }
   }
 
-  &__map {
-    // position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 28px;
-      height: 28px;
-      background: red;
-    }
+  &__cards-slider {
+    
   }
 }

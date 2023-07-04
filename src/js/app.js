@@ -1,5 +1,9 @@
+"use strict";
+//Init slider header
 import Swiper, { Navigation, Pagination } from "swiper";
-const nameCard = [...document.querySelectorAll('.name-slide')].map(item => item.textContent);
+const nameCard = [...document.querySelectorAll(".name-slide")].map(
+  (item) => item.textContent
+);
 
 const swiperHeader = new Swiper(".slider-header", {
   modules: [Navigation, Pagination],
@@ -20,6 +24,23 @@ const swiperHeader = new Swiper(".slider-header", {
     },
   },
 
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+});
+
+//Init slider cards surf
+const swiperCardsSurf = new Swiper(".slider-cards-beach", {
+  modules: [Navigation, Pagination],
+  slidesPerView: 4,
+  centeredSlides: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  
   effect: "fade",
   fadeEffect: {
     crossFade: true,

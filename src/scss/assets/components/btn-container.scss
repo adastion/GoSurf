@@ -1,0 +1,48 @@
+.btn-container {
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  &__text {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 1px;
+      background: $white;
+      right: -30px;
+    }
+  }
+
+  &__btn {
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    color: $white;
+    background: $cornflower_blue;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    & svg {
+      fill: $white;
+      transform: rotate(-180deg);
+    }
+  }
+}
