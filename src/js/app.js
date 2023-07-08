@@ -31,6 +31,8 @@ const swiperHeader = new Swiper(".slider-header", {
 });
 
 //Init slider cards surf
+const cardData = document.querySelector(".card-data");
+
 const swiperCardsSurf = new Swiper(".slider-cards-beach", {
   modules: [Navigation, Pagination],
   slidesPerView: 4,
@@ -41,7 +43,19 @@ const swiperCardsSurf = new Swiper(".slider-cards-beach", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      console.log(cardData);
+      return `<li class='${className} surf__item surf__item--${index + 1}'>
+        <div class="surf__point"></div>
+        <div class='card-data'>${cardData.innerHTML}</div>
+      </li>`;
+    },
+  },
+
   effect: "fade",
   fadeEffect: {
     crossFade: true,

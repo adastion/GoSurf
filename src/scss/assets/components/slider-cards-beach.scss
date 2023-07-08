@@ -1,5 +1,4 @@
 .slider-cards-beach {
-
   &__content {
     height: 100%;
     padding: 70px 40px 0;
@@ -40,7 +39,7 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -68,14 +67,54 @@
       margin-top: 90px;
     }
 
-    &.active {
-      display: block;
+    &.swiper-slide-active {
+      &::after {
+        opacity: 0.3;
+      }
+
+      & .btn-container {
+        display: flex;
+      }
     }
   }
-  & .swiper-pagination {
+
+  & .swiper-pagination-bullets.swiper-pagination-horizontal {
+    max-width: 1246px;
+    height: 100%;
+    position: relative;
+    bottom: auto;
+    top: 200px;
   }
+
+  & .swiper-pagination-bullet-active {
+    & .surf__point::before {
+      display: flex;
+    }
+
+    & .card-data {
+      display: block;
+      z-index: 30;
+      top: -236px;
+      left: 15px;
+      transform: translate(-50%);
+    }
+
+    &:first-child {
+      & .card-data {
+        left: 10%;
+      }
+    }
+
+    &:last-child {
+      & .card-data {
+        left: auto;
+        right: 150px;
+      }
+    }
+  }
+
   & .swiper-button-prev,
   & .swiper-button-next {
-    top: 24px;
+    top: 700px;
   }
 }
