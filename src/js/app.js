@@ -61,3 +61,20 @@ const swiperCardsSurf = new Swiper(".slider-cards-beach", {
     crossFade: true,
   },
 });
+
+
+//Init slider travel
+const swiperTravel = new Swiper(".slider-travel", {
+  modules: [Navigation, Pagination],
+  centeredSlides: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+});
